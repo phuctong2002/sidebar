@@ -1,0 +1,110 @@
+body{
+    line-height: 1.5;
+    font-size: 0.875rem;
+    position: relative;
+    background-color: hsl(210, 36%, 96%);
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: block;
+}
+.sidebar-toggle{
+    position: fixed;
+    right: 2rem;
+    border-width: 0;
+    background-color: #fff;
+    color: aqua;
+    font-size: 2rem;
+    cursor: pointer;
+    animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+.sidebar{
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 58px auto 68px;
+    transform: translate(0);
+    transition-duration: 0.5s ;
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 16px 0;
+}
+.sidebar-header .close-btn{
+    border-width: 0;
+    background-color: #fff;
+    font-size: 1.75rem;
+    color: hsl(360, 67%, 44%);
+}
+.links{
+    padding-left: 0;
+}
+.links li{
+    height: 68px;
+        font-size: 1rem;
+    color: hsl(209, 61%, 16%);
+    line-height: 1.5;
+    
+}
+.links a{
+    display: block;
+    font-size: 1.5rem;
+    color: hsl(210, 22%, 49%);
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    transition-delay: 0s;
+}
+.links a:hover{
+    background-color: hsl(205, 86%, 81%);
+    color: #49a6e9;
+  
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    
+}
+.social-icons li{
+    height: 36px;
+    width: 40px;
+    font-size: 24px;
+
+}
+.social-icons li a{
+    text-align: center;
+    color: #49a6e9;
+}
+.social-icons li a:hover{
+    color: black;
+}
+.show-sidebar{
+    transform: translate(-400px);
+    transition-duration: 0.5s;
+}
+.close-btn{
+    width: 40px;
+}
+.close-btn:hover{
+    font-size: 36px;
+    cursor: pointer;
+}
